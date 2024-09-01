@@ -2,24 +2,23 @@
     background-color: #2F9E41;
     width:100%;
     display: flex;
-    color:white;
     padding:5px;
+ 
 }
 #menu p{
     padding:20px;
     cursor: pointer;
     font-size: 20px;
     margin-bottom: 0px;
-}
+    color:white;
+}   
 
 #menu p:hover{
-    background-color: #008042;
+    background-color: #ffffff60;
     transition: 0.5s;
     scale:1.05;
 }
-#SobreDiv{
-    display: none;
-}
+
 .page {
     margin:20px;
 }
@@ -49,4 +48,8 @@
 
 .ano{
     font-size: 16px;
+}
+
+div{
+    margin-bottom: 30px;
 }
