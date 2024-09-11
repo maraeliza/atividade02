@@ -1,9 +1,23 @@
 #menu{
-    background-color: #2F9E41;
+    background-color: #005d9b;
     width:100%;
     display: flex;
     padding:5px;
  
+}
+#logo{
+    opacity: 0;
+    scale:0;
+    
+}
+#logoMidi{
+    scale:0;
+}
+
+#menu img{
+    margin-left: 0px;
+    margin-top: 10px;
+    opacity: 0;
 }
 #menu p{
     padding:20px;

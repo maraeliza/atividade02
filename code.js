@@ -1,9 +1,23 @@
 $(document).ready(()=>{
+ 
     //esconde todas as divs
     $("#todasDivs div").hide()
     $("#SobreDiv").show()
+    $("#logo").animate({
+          opacity:'1',
+          scale:1
+    }, 'slow')
+    $("#logoif").animate({
+        opacity:'1',
+        'margin-left': '20px'
+    }, 'slow')
+   
     //checa se eu cliquei em algum item do menu
     $("#menu p").click(function(){
+        $("#logo").show()
+        $("#logoMidi").animate({
+            scale:0
+        }, 'slow')
         //pega o id do item
         var id = $(this).attr('id')
         //esconde todos os itens
@@ -21,6 +35,10 @@ $(document).ready(()=>{
                 changeColor('red')
                 break
             case "Projetos":
+                $("#logo").hide()
+                $("#logoMidi").animate({
+                    scale:1
+                }, 'slow')
                 changeColor('brown')
                 break
             case "Contato":
