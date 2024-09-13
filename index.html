@@ -1,184 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!--FONTE-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <!--BOOTSTRAP 3-->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-    <!--BOOTSTRAP 5.0-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-      crossorigin="anonymous"
-    ></script>
-    <!--JQUERY UI-->
-    <link
-      rel="stylesheet"
-      href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css"
-    />
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <!--FONTE-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <!--BOOTSTRAP 3-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-    <!--LOCAL-->
-    <link rel="stylesheet" href="style.css" />
+  <!--BOOTSTRAP 5.0-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <!--JQUERY UI-->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <!--JQUERY UI-->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
 
-    <!--Titulo-->
-    <link rel="icon" href="iftm.ico" type="image/x-icon" />
-    <title>Atividade 02</title>
-  </head>
+  <!--LOCAL-->
+  <link rel="stylesheet" href="style.css" />
 
-  <body>
-    <div id="menu">
-      <img id="logoif" src="if.png" width="60px" height="60px">
-      <p id="Sobre">Sobre</p>
-      <p id="Equipe">Equipe Gestora</p>
-      <p id="Agenda">Agenda</p>
-      <p id="Projetos">Projetos</p>
-      <p id="Contato">Contato</p>
-    </div>
+  <!--Titulo-->
+  <link rel="icon" href="iftm.ico" type="image/x-icon" />
+  <title>Atividade 02</title>
+</head>
 
-    <div class="container">
-      <h1 class="page-header">Laboratório de Ideação</h1>
-      <center><img src="labi.png" id="logo" /></center>
-      <img />
-      <div id="todasDivs">
-        <div id="SobreDiv" class="page">
-          <h2 class="">Sobre o laboratório</h2>
-          <center><img style="border-radius: 20px;" src="Fotolab1.jpeg">  </center>
-          <p>
-            O Laboratório de Ideação (LABI), localizado na Unidade II do campus
-            UPT, é um espaço dinâmico para criação e desenvolvimento de
-            projetos. Ele promove eventos, minicursos e oficinas, incentivando a
-            comunidade e estudantes a resolver problemas locais com a filosofia
-            “faça você mesmo”. No LABI, todos têm acesso a ferramentas e
-            equipamentos para construir, consertar e inovar, estimulando a
-            prática e o aprendizado hands-on.
-            <br />
-            <br />
-            Para saber mais,
-            <a
-              target="_blank"
-              href="https://iftm.edu.br/propi/inovacao/labs/parquetecnologico/"
-              >clique aqui</a
-            >.
-          </p>
-        </div>
+<body>
+  <div id="menu">
+    <img id="logoif" src="if.png" width="60px" height="60px">
+    <p id="Sobre">Sobre</p>
+    <p id="Equipe">Equipe Gestora</p>
+    <p id="Agenda">Agenda</p>
+    <p id="Projetos">Projetos</p>
+    <p id="Contato">Contato</p>
+    <p id="Admin">Admin</p>
+  </div>
 
-        <div id="EquipeDiv" class="page">
-          <h2 class="">Equipe Gestora</h2>
-
-          <p class="equipe">
-            Coordenador: Prof. Gustavo Finholdt (gustavofinholdt@iftm.edu.br)
-            <br />
-            Membros:<br />
-            Prof. Helio Aparecido Lima da Silva<br />
-            Prof. Júlio César Ferreira<br />
-            Prof. Marcelo Pansani Freitas<br />
-            Prof. Rafael Godoi Orbolato<br />
-            Prof. Robson Borges Rodrigues<br />
-            Tec. Natalia Crist⁠ina Reis de Moraes<br />
-          </p>
-        </div>
-
-        <div id="AgendaDiv" class="page">
-          <h2 class="">Agenda</h2>
-          <p>
-            Para utilizar os equipamentos do LABI, é essencial agendar com
-            antecedência. O agendamento deve ser feito pelo e-mail
-            <a target="_blank" href="mailto:labi.upt@iftm.edu.br">labi.upt@iftm.edu.br</a> e deve ser solicitado com pelo menos dois dias
-            úteis de antecedência. Isso garante que o equipamento e o pessoal
-            técnico estejam disponíveis para atender à sua demanda.
-          </p>
-          <p>Você pode solicitar agendamento <a target="_blank" href="https://integra.iftm.edu.br/portfolio/laboratorios/labi-campus-avancado-uberaba-parque-tecnologico-264">aqui</a></p>
-          <p>
-            Caso precise cancelar o agendamento, é importante comunicar o Comitê
-            Gestor do LABI com pelo menos 24 horas de antecedência pelo mesmo
-            e-mail. Isso ajuda a liberar o horário para outros usuários e a
-            otimizar o uso dos recursos do laboratório.
-          </p>
-
-          <p>
-            Vale lembrar que o horário de funcionamento do LABI pode ser
-            ajustado conforme a disponibilidade de pessoal técnico e dos
-            equipamentos. Para qualquer alteração no horário, é necessário obter
-            uma autorização específica do Comitê Gestor do LABI.
-          </p>
-
-          <p>
-            Este procedimento visa assegurar a melhor utilização dos recursos do
-            LABI e garantir que todos os usuários possam agendar e utilizar os
-            equipamentos de forma eficiente e organizada.
-          </p>
-        </div>
-        <div id="ProjetosDiv" class="page">
-          <center>
-            <img src="logoMidi.png" id="logoMidi">
-          </center>
-          <h2 class="">Projetos</h2>
-          <center>
-            <img style="border-radius: 20px;" src="Fotolab1.jpeg">  
-          </center>
-          
-          <p>
-            O LABI possui um espaço de aproximadamente 40 m2, bancadas e vários
-            equipamentos importantes para o desenvolvimento de projetos de
-            inovação tecnológica, tais como:
-          </p>
+  <div class="container">
+    <h1 class="page-header">Laboratório de Ideação</h1>
+    <center><img src="labi.png" id="logo" /></center>
+    <img />
+    <div id="todasDivs">
+      <div id="SobreDiv" class="page">
+        <h2 class="">Sobre o laboratório</h2>
+        <center><img style="border-radius: 20px;" src="Fotolab1.jpeg"> </center>
+        <p>
+          O Laboratório de Ideação (LABI), localizado na Unidade II do campus
+          UPT, é um espaço dinâmico para criação e desenvolvimento de
+          projetos. Ele promove eventos, minicursos e oficinas, incentivando a
+          comunidade e estudantes a resolver problemas locais com a filosofia
+          “faça você mesmo”. No LABI, todos têm acesso a ferramentas e
+          equipamentos para construir, consertar e inovar, estimulando a
+          prática e o aprendizado hands-on.
           <br />
-          <p>3 impressoras 3D</p>
-          <p>Cortadora CNC a Laser</p>
-          <p>Lixadeira Orbital</p>
-          <p>Serra Tico Tico</p>
-          <p>Micro Fresadora de Bancada</p>
-          <p>Plotter de Recorte</p>
-          <p>Kits de robótica Arduíno e Raspberry</p>
-          <p>Computadores</p>
-          <p>Várias ferramentas para ideação</p>
-        </div>
-        <div id="ContatoDiv" class="page">
-          <h2 class="">Contato</h2>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3755.8521733832877!2d-47.95995818879102!3d-19.71891683169435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bad18158ad00c1%3A0x759a6a4dd1aefccb!2sAv.%20Dr.%20Florestan%20Fernandes%2C%20131%20-%20Univerdecidade%2C%20Uberaba%20-%20MG%2C%2038064-190!5e0!3m2!1spt-BR!2sbr!4v1725148650351!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <p>
-            Endereço: AV. DOUTOR FLORESTAN FERNANDES , 131 - UNIVERDECIDADE
-          </p>
-          <p>Cidade: Uberaba</p>
-          <p>Estado: Minas Gerais</p>
-          <p>Responsável: <a target="_blank" href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=EAE2374F774D8D0C4712448A54A2E012.buscatextual_0">GUSTAVO FINHOLDT</a></p>
-          <p>Telefone: (034) 3326-1400</p>
-          <p>E-mail: <a target="_blank" href="mailto:labi.upt@iftm.edu.br">labi.upt@iftm.edu.br</a></p>
           <br />
+          Para saber mais,
+          <a target="_blank" href="https://iftm.edu.br/propi/inovacao/labs/parquetecnologico/">clique aqui</a>.
+        </p>
+      </div>
+
+      <div id="EquipeDiv" class="page">
+        <h2 class="">Equipe Gestora</h2>
+
+        <p class="equipe">
+          Coordenador: Prof. Gustavo Finholdt (gustavofinholdt@iftm.edu.br)
+          <br />
+          Membros:<br />
+          Prof. Helio Aparecido Lima da Silva<br />
+          Prof. Júlio César Ferreira<br />
+          Prof. Marcelo Pansani Freitas<br />
+          Prof. Rafael Godoi Orbolato<br />
+          Prof. Robson Borges Rodrigues<br />
+          Tec. Natalia Crist⁠ina Reis de Moraes<br />
+        </p>
+      </div>
+
+      <div id="AgendaDiv" class="page">
+        <h2 class="">Agenda</h2>
+        <p>
+          Para utilizar os equipamentos do LABI, é essencial agendar com
+          antecedência. O agendamento deve ser feito pelo e-mail
+          <a target="_blank" href="mailto:labi.upt@iftm.edu.br">labi.upt@iftm.edu.br</a> e deve ser solicitado com pelo
+          menos dois dias
+          úteis de antecedência. Isso garante que o equipamento e o pessoal
+          técnico estejam disponíveis para atender à sua demanda.
+        </p>
+        <p>Você pode solicitar agendamento <a target="_blank"
+            href="https://integra.iftm.edu.br/portfolio/laboratorios/labi-campus-avancado-uberaba-parque-tecnologico-264">aqui</a>
+        </p>
+        <p>
+          Caso precise cancelar o agendamento, é importante comunicar o Comitê
+          Gestor do LABI com pelo menos 24 horas de antecedência pelo mesmo
+          e-mail. Isso ajuda a liberar o horário para outros usuários e a
+          otimizar o uso dos recursos do laboratório.
+        </p>
+
+        <p>
+          Vale lembrar que o horário de funcionamento do LABI pode ser
+          ajustado conforme a disponibilidade de pessoal técnico e dos
+          equipamentos. Para qualquer alteração no horário, é necessário obter
+          uma autorização específica do Comitê Gestor do LABI.
+        </p>
+
+        <p>
+          Este procedimento visa assegurar a melhor utilização dos recursos do
+          LABI e garantir que todos os usuários possam agendar e utilizar os
+          equipamentos de forma eficiente e organizada.
+        </p>
+      </div>
+      <div id="ProjetosDiv" class="page">
+        <center>
+          <img src="logoMidi.png" id="logoMidi">
+        </center>
+        <h2 class="">Projetos</h2>
+        <center>
+          <img style="border-radius: 20px;" src="Fotolab1.jpeg">
+        </center>
+
+        <p>
+          O LABI possui um espaço de aproximadamente 40 m2, bancadas e vários
+          equipamentos importantes para o desenvolvimento de projetos de
+          inovação tecnológica, tais como:
+        </p>
+        <br />
+        <p>3 impressoras 3D</p>
+        <p>Cortadora CNC a Laser</p>
+        <p>Lixadeira Orbital</p>
+        <p>Serra Tico Tico</p>
+        <p>Micro Fresadora de Bancada</p>
+        <p>Plotter de Recorte</p>
+        <p>Kits de robótica Arduíno e Raspberry</p>
+        <p>Computadores</p>
+        <p>Várias ferramentas para ideação</p>
+      </div>
+      <div id="AdminDiv" class="page">
+         <h2 class="page-header">Pessoas para entrar em contato: </h2>
+         <div id="pessoasDiv">
+
+         </div>
+      </div>
+      <div id="ContatoDiv" class="page">
+        <div class="divFormulario">
+          <h2 class="page-header">Formulário</h2>
+          <form class="form">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div>
+                <label>Nome: <span style="color:red">*</span></label>
+                <input  id="nomeInput" placeholder="Digite aqui seu nome" name="nome" class="form-control">
+
+              </div>
+              <div>
+                <label>Telefone: </label>
+                <input title="(34) 9 9999-9999" id="telInput" class="form-control" name="telefone"
+                  placeholder="Digite aqui seu número de telefone">
+
+              </div>
+              <div>
+                <label>Email: <span style="color:red">*</span> </label>
+                <input  id="emailInput" class="form-control" name="email" placeholder="Digite aqui seu email">
+
+              </div>
+              <div>
+                <label>Data de Nascimento: </label>
+                <input id="dataInput" class="form-control" name="data" placeholder="Data de nascimento">
+
+              </div>
+
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="sexo">
+                <label>Sexo</label> <br>
+
+                <input class="form-check-input" type="radio" id="femOp" name="sexoOp" value="F">
+                <label class="form-check-label" for="femOp">Feminino</label>
+                <br>
+
+                <input class="form-check-input" type="radio" id="masOp" name="sexoOp" value="M">
+                <label class="form-check-label" for="masOp">Masculino</label>
+              </div>
+
+              <div class="interesse form-check">
+                <label>Interesses de pesquisa: </label> <br>
+
+                <input class="form-check-input" type="checkbox" id="op1" name="intOps" value="1">
+                <label class="form-check-label" for="op1">Impressão 3D para Ferramentas de Assistência Personalizadas</label><br>
+
+                <input class="form-check-input" type="checkbox" id="op2" name="intOps" value="2">
+                <label class="form-check-label" for="op2">Uso da robótica para pessoas com necessidades especiais</label><br>
+
+                <input class="form-check-input" type="checkbox" id="op3" name="intOps" value="3">
+                <label class="form-check-label" for="op3">Uso de tecnologia como ferramenta educacional</label> <br>
+              </div>
+            </div>
+            <button id="btnEnviar" class="btn btn-success btm" type=""> Enviar</button>
+
+
+
+          </form>
+
         </div>
+        <h2 class="">Entre em contato diretamente</h2>
+        <h3>Local: </h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3755.8521733832877!2d-47.95995818879102!3d-19.71891683169435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bad18158ad00c1%3A0x759a6a4dd1aefccb!2sAv.%20Dr.%20Florestan%20Fernandes%2C%20131%20-%20Univerdecidade%2C%20Uberaba%20-%20MG%2C%2038064-190!5e0!3m2!1spt-BR!2sbr!4v1725148650351!5m2!1spt-BR!2sbr"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p>
+          Endereço: AV. DOUTOR FLORESTAN FERNANDES , 131 - UNIVERDECIDADE
+        </p>
+        <p>Cidade: Uberaba</p>
+        <p>Estado: Minas Gerais</p>
+        <p>Responsável: <a target="_blank"
+            href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=EAE2374F774D8D0C4712448A54A2E012.buscatextual_0">GUSTAVO
+            FINHOLDT</a></p>
+        <p>Telefone: (034) 3326-1400</p>
+        <p>E-mail: <a target="_blank" href="mailto:labi.upt@iftm.edu.br">labi.upt@iftm.edu.br</a></p>
+        <br />
+
+        
       </div>
     </div>
+  </div>
 
-    <script src="code.js"></script>
-  </body>
+  <script src="code.js"></script>
+</body>
+
 </html>

@@ -1,5 +1,18 @@
+var contatos = [
+
+]
+var ints = [
+    "Impressão 3D para Ferramentas de Assistência Personalizadas",
+    "Uso da robótica para pessoas com necessidades especiais",
+    "Uso de tecnologia como ferramenta educacional"
+]
 $(document).ready(()=>{
- 
+    $("#dataInput").datepicker({
+        showOtherMonths:true,
+        selectOtherMonths:true,
+        showAnim:"slideDown",
+        dateFormat:"dd/mm/yy"
+    })
     //esconde todas as divs
     $("#todasDivs div").hide()
     $("#SobreDiv").show()
@@ -24,6 +37,7 @@ $(document).ready(()=>{
         $("#todasDivs div").hide()
         //exibe a div correspondente
         $("#"+id+"Div").fadeIn()
+        $("#"+id+"Div div").fadeIn()
         switch(id){
             case "Sobre":
                 changeColor('green')
@@ -44,7 +58,43 @@ $(document).ready(()=>{
             case "Contato":
                 changeColor('#ffe95c')
                 break
+            case "Admin":
+                montarContatos();
+                changeColor('blue')
+                break
         }
+    })
+
+    $("#btnEnviar").click(function(e){
+        e.preventDefault();
+        var nome = $("#nomeInput").val();
+        var email = $("#emailInput").val();
+        var telefone = $("#telInput").val();
+        var data = $("#dataInput").val();
+        var sexo = $("input[name='sexoOp']:checked").val();
+        var interesses = [];
+        $("input[name='intOps']:checked").map((item)=>{
+            interesses.push(ints[item])
+        });
+
+        if(nome && email){
+            contatos.push({
+                nome:nome,
+                email:email,
+                telefone:telefone,
+                data:data,
+                sexo:sexo,
+                interesses:interesses
+            })
+            $("#nomeInput").val('');
+            $("#emailInput").val('');
+            $("#telInput").val('');
+            $("#dataInput").val('');
+            
+        }else {
+            alert("Preencha os campos de e-mail e nome!")
+        }
+        console.log(interesses)
     })
 })  
 
@@ -69,4 +119,35 @@ function changeColor(cor){
         })
     }
     
+}
+
+function montarContatos(){
+    $("#pessoasDiv").val('')
+    if(contatos.length > 0){
+        for(var i = 0; i < contatos.length; i++){
+            var texto = "<p> Contato "+i+1+"</p>";
+            texto += "<p>Nome: "+contatos[i].nome +"</p>";
+            texto += "<p>E-mail: "+contatos[i].email+"</p>";
+            if(contatos[i].telefone){
+                texto += "<p>Telefone: "+contatos[i].telefone+"</p>";
+            }
+            if(contatos[i].data){
+                texto += "<p>Data de nascimento: "+contatos[i].data+"</p>";
+            }
+            if(contatos[i].sexo){
+                texto += "<p>Sexo: "+contatos[i].sexo+"</p>";
+            }
+            if(contatos[i].interesses.length>0){
+                for(var n = 0; n < contatos[i].interesses.length; n++){
+                    texto += "<p>Interesse: "+contatos[i].interesses[n]+"</p>";
+                }
+               
+            }
+            $("#pessoasDiv").append(texto);
+        }
+    }else{
+        $("#pessoasDiv").append(
+            "<p> Nenhuma pessoa tentou entrar em contato ainda </p>"
+        )
+    }
 }
