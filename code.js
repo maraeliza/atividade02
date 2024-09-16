@@ -1,6 +1,9 @@
 var contatos = [
 
 ]
+var contatosHTML = [
+
+]
 var ints = [
     "Impressão 3D para Ferramentas de Assistência Personalizadas",
     "Uso da robótica para pessoas com necessidades especiais",
@@ -90,9 +93,16 @@ $(document).ready(()=>{
             $("#emailInput").val('');
             $("#telInput").val('');
             $("#dataInput").val('');
-            
+            swal({
+                title:nome+" foi adicionado com sucesso!",
+                button:"OK"
+            })
         }else {
-            alert("Preencha os campos de e-mail e nome!")
+            swal({
+                title:"Preencha os campos de e-mail e nome!",
+                button:"OK"
+            })
+            
         }
         console.log(interesses)
     })
@@ -123,28 +133,38 @@ function changeColor(cor){
 
 function montarContatos(){
     $("#pessoasDiv").val('')
+    contatosHTML = [];
     if(contatos.length > 0){
         for(var i = 0; i < contatos.length; i++){
-            var texto = "<p> Contato "+i+1+"</p>";
-            texto += "<p>Nome: "+contatos[i].nome +"</p>";
-            texto += "<p>E-mail: "+contatos[i].email+"</p>";
+            var texto = "<div class='contato'>";
+            texto += "<p><b>Nome:</b> "+contatos[i].nome +"</p>";
+            texto += "<p><b>E-mail</b>: "+contatos[i].email+"</p>";
             if(contatos[i].telefone){
-                texto += "<p>Telefone: "+contatos[i].telefone+"</p>";
+                texto += "<p><b>Telefone</b>: "+contatos[i].telefone+"</p>";
             }
             if(contatos[i].data){
-                texto += "<p>Data de nascimento: "+contatos[i].data+"</p>";
+                texto += "<p><b>Data de nascimento</b>: "+contatos[i].data+"</p>";
             }
             if(contatos[i].sexo){
-                texto += "<p>Sexo: "+contatos[i].sexo+"</p>";
+                if(contatos[i].sexo == 'F'){
+                    texto += "<p><b>Sexo</b>: Feminino </p>";
+                }else {
+                    texto += "<p><b>Sexo</b>: Masculino</p>";
+                }
+                
             }
             if(contatos[i].interesses.length>0){
+                 texto += "<p><b>Interesses:</b> "
                 for(var n = 0; n < contatos[i].interesses.length; n++){
-                    texto += "<p>Interesse: "+contatos[i].interesses[n]+"</p>";
+                    texto += "<p>"+contatos[i].interesses[n]+"</p>";
                 }
                
             }
-            $("#pessoasDiv").append(texto);
+            texto += "</div><hr>";
+            contatosHTML.push(texto);
+            
         }
+        $("#pessoasDiv").html(contatosHTML);
     }else{
         $("#pessoasDiv").append(
             "<p> Nenhuma pessoa tentou entrar em contato ainda </p>"

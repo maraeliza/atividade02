@@ -91,3 +91,15 @@
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgb(255, 247, 244);
 }
+
+.contato p{
+    margin-bottom: 0px !important;
+    font-size: 18px;
+}
+.contato {
+    margin-bottom: 30px;
+    padding:20px;
+}
+.p {
+    font-size: 25px;
+}
